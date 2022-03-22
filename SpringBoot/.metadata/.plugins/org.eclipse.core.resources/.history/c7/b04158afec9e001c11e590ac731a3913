@@ -1,0 +1,22 @@
+package kodlamaio.northwind.business.concretes;
+
+import kodlamaio.northwind.business.abstracts.UserService;
+import kodlamaio.northwind.core.entities.User;
+import kodlamaio.northwind.core.utilities.result.DataResult;
+import kodlamaio.northwind.core.utilities.result.Result;
+
+public class UserManeger implements UserService {
+
+	@Override
+	public Result add(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DataResult<User> getByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

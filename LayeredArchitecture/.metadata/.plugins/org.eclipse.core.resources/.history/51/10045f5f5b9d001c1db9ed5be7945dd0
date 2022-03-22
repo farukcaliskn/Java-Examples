@@ -1,0 +1,5 @@
+package com.nLayeredDemo.business.abstracts;
+
+public interface ProductService {
+
+}

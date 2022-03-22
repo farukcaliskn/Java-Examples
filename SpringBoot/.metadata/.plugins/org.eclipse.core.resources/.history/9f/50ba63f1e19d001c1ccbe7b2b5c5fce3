@@ -1,0 +1,10 @@
+package kodlamaio.northwind.core.utilities.result;
+
+public class ErrorDataResult<T> extends DataResult<T> {
+
+	public ErrorDataResult(boolean success, T data) {
+		super(success, data);
+		// TODO Auto-generated constructor stub
+	}
+
+}

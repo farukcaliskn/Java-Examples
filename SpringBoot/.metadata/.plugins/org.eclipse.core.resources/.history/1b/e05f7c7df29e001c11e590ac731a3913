@@ -1,0 +1,7 @@
+package kodlamaio.northwind.api;
+
+@RestController
+@RequestMapping("/api/users")
+public class UsersController {
+
+}

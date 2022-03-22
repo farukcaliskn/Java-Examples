@@ -1,0 +1,22 @@
+package com.nLayeredDemo;
+
+import com.nLayeredDemo.business.abstracts.ProductService;
+import com.nLayeredDemo.business.concretes.ProductManeger;
+import com.nLayeredDemo.dataAccess.concretes.AbcProductDao;
+import com.nLayeredDemo.dataAccess.concretes.HibernateProductDao;
+import com.nLayeredDemo.entities.concretes.Product;
+import com.nLayeredDemo.jLogger.JLoggerManeger;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		ProductService productService = new ProductManeger(new AbcProductDao());
+		ProductService productService2 = new ProductManeger(new HibernateProductDao(), new JLoggerManeger());
+		Product product = new Product(1, 2, "kalem", 5.5, 50);
+		productService.add(product);
+		productService2.add(product);
+	}
+}

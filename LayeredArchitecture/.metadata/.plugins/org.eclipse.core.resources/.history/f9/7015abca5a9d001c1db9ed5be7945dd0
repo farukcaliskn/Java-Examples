@@ -1,0 +1,5 @@
+package com.nLayeredDemo.dataAccess.concretes;
+
+public class HibernateProductDao {
+
+}

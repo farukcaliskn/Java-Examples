@@ -1,0 +1,11 @@
+package com.nLayeredDemo.core;
+
+public class JLoggerManegerAdapter implements LoggerService {
+
+	@Override
+	public void logSystem(String message) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

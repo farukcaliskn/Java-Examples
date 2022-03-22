@@ -1,0 +1,48 @@
+package kodlamaio.northwind.api;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import kodlamaio.northwind.business.abstracts.UserService;
+import kodlamaio.northwind.core.entities.User;
+import kodlamaio.northwind.core.utilities.result.ErrorDataResult;
+
+@RestController
+@RequestMapping("/api/users")
+public class UsersController {
+	private UserService userService;
+
+	@Autowired
+	public UsersController(UserService userService) {
+		super();
+		this.userService = userService;
+	}
+
+	// Spring dökümantasyonda mevcut
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ErrorDataResult<Object> handleValidationException(MethodArgumentNotValidException exception) {
+		Map<String, String> validationErrors = new HashMap<String, String>();
+		for (FieldError fieldError : exception.getBindingResult().getFieldErrors()) {
+			validationErrors.put(fieldError.getField(), fieldError.getDefaultMessage());
+		}
+
+		ErrorDataResult<Object> errorDataResult = new ErrorDataResult<Object>(validationErrors);
+	}
+
+	@PostMapping("/add")
+	public ResponseEntity<?> add(@RequestBody User user) {
+		return ResponseEntity.ok(userService.add(user));
+	}
+
+}

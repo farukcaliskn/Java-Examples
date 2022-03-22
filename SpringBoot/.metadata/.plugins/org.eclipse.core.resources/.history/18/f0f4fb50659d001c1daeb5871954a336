@@ -1,0 +1,32 @@
+package kodlamaio.northwind.entities.concretes;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "products")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Product {
+	@Id
+	@Column(name = "product_id")
+	private int id;
+	@Column(name = "product_id")
+	private int categoryId;
+	@Column(name = "product_id")
+	private String productName;
+	@Column(name = "product_id")
+	private double unitPrice;
+	@Column(name = "product_id")
+	private short unitsInStock;
+	@Column(name = "product_id")
+	private String quantityPerUnit;
+
+}

@@ -1,0 +1,5 @@
+package com.nLayeredDemo.core;
+
+public class LoggerService {
+
+}

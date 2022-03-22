@@ -1,0 +1,22 @@
+package kodlamaio.northwind.entities.concretes;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "products")
+public class Product {
+	private int id;
+	private int categoryId;
+	private String productName;
+	private double unitPrice;
+	private short unitsInStock;
+	private String quantityPerUnit;
+}

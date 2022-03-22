@@ -1,0 +1,7 @@
+package com.nLayeredDemo.dataAccess.concretes;
+
+import com.nLayeredDemo.dataAccess.abstracts.ProductDao;
+
+public class HibernateProductDao implements ProductDao {
+
+}

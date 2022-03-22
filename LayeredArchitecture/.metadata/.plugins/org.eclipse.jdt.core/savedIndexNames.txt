@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/home/faruk/kodlama.io.java/Katmanlı Mimari/.metadata/.plugins/org.eclipse.jdt.core
+646308851.index
+3215338570.index
+4204436829.index
+1680701831.index
+1865797976.index

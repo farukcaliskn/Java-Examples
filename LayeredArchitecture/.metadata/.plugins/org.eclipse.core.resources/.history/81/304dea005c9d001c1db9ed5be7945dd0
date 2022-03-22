@@ -1,0 +1,16 @@
+package com.nLayeredDemo;
+
+import com.nLayeredDemo.business.abstracts.ProductService;
+import com.nLayeredDemo.business.concretes.ProductManeger;
+import com.nLayeredDemo.dataAccess.abstracts.ProductDao;
+import com.nLayeredDemo.dataAccess.concretes.HibernateProductDao;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		ProductService productService = new ProductManeger(new HibernateProductDao);
+	}
+}

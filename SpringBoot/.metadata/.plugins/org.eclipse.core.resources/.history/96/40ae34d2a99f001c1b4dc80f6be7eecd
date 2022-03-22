@@ -1,0 +1,15 @@
+package com.example.aop.serviceAspect;
+
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class ServiceAspect {
+
+	public void getMessageBefore() {
+
+	}
+
+	public void getMessageAfter() {
+
+	}
+}

@@ -1,0 +1,87 @@
+package kodlamaio.northwind.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kodlamaio.northwind.business.abstracts.ProductService;
+import kodlamaio.northwind.core.utilities.result.DataResult;
+import kodlamaio.northwind.core.utilities.result.Result;
+import kodlamaio.northwind.core.utilities.result.SuccesDataResult;
+import kodlamaio.northwind.core.utilities.result.SuccesResult;
+import kodlamaio.northwind.dataAccess.abstracts.ProductDao;
+import kodlamaio.northwind.entities.concretes.Product;
+
+@Service
+public class ProductManeger implements ProductService {
+
+	private ProductDao productDao;
+
+	@Autowired
+	public ProductManeger(ProductDao productDao) {
+		super();
+		this.productDao = productDao;
+	}
+
+	@Override
+	public DataResult<List<Product>> getAll() {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<List<Product>>(this.productDao.findAll(), "Data listelendi");
+	}
+
+	@Override
+	public Result add(Product product) {
+		// TODO Auto-generated method stub
+		productDao.save(product);
+		return new SuccesResult("Ürün eklendi");
+	}
+
+	@Override
+	public DataResult<Product> getByProductName(String productName) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<Product>(this.productDao.getByProductName(productName), "Data listelendi");
+	}
+
+	@Override
+	public DataResult<Product> getByProductNameAndCatecory(String productName, int categoryId) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<Product>(this.productDao.getByProductNameAndCatecory(productName, categoryId),
+				"Data listelendi");
+	}
+
+	@Override
+	public DataResult<List<Product>> findByProductNameOrCategory(String productName, int categoryId) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<List<Product>>(this.productDao.findByProductNameOrCategory(productName, categoryId),
+				"Data listelendi");
+	}
+
+	@Override
+	public DataResult<List<Product>> findByCategoryIn(List<Integer> categories) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<List<Product>>(this.productDao.findByCategoryIn(categories), "Data listelendi");
+	}
+
+	@Override
+	public DataResult<List<Product>> findByProductNameContains(String productName) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<List<Product>>(this.productDao.findByProductNameContains(productName),
+				"Data listelendi");
+	}
+
+	@Override
+	public DataResult<List<Product>> findByProductNameStartsWith(String productName) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<List<Product>>(this.productDao.findByProductNameStartsWith(productName),
+				"Data listelendi");
+	}
+
+	@Override
+	public DataResult<List<Product>> findByNameAndCategory(String productName, int categoryId) {
+		// TODO Auto-generated method stub
+		return new SuccesDataResult<List<Product>>(this.productDao.findByNameAndCategory(productName, categoryId),
+				"Data listelendi");
+	}
+
+}

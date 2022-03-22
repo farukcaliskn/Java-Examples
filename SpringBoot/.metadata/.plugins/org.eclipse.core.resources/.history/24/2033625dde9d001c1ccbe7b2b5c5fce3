@@ -1,0 +1,6 @@
+package kodlamaio.northwind.core.utilities.result;
+
+public interface Result {
+	private boolean success;
+	private String message;
+}

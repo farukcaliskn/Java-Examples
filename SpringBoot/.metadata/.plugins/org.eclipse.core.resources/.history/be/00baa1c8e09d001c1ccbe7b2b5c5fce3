@@ -1,0 +1,10 @@
+package kodlamaio.northwind.core.utilities.result;
+
+public class SuccesResult extends Result {
+
+	public SuccesResult(boolean success) {
+		super(success);
+		// TODO Auto-generated constructor stub
+	}
+
+}

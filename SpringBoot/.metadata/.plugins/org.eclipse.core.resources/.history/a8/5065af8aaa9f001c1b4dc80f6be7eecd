@@ -1,0 +1,21 @@
+package com.example.aop.serviceAspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class ServiceAspect {
+
+	@Before("execution(* com.example.aop.service.*.*(..))")
+	public void getMessageBefore(JoinPoint joinPoint) {
+
+		System.out.println("getMessage mmetodundan önce paramere yakalandı" + joinPoint.getArgs()[0]);
+	}
+
+	@After
+	public void getMessageAfter() {
+
+	}
+}

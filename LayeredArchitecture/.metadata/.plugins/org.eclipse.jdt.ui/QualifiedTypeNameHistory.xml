@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.entities.abstacts.Entity"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.dataAccess.abstracts.ProductDao"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.dataAccess.concretes.AbcProductDao"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.entities.concretes.Product"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.business.abstracts.ProductService"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.business.concretes.ProductManeger"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.dataAccess.concretes.HibernateProductDao"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.core.LoggerService"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.jLogger.JLoggerManeger"/>
+    <fullyQualifiedTypeName name="com.nLayeredDemo.core.JLoggerManegerAdapter"/>
+</qualifiedTypeNameHistroy>

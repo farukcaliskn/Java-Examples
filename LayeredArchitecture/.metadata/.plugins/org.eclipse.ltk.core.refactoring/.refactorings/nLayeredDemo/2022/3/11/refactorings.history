@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.nLayeredDemo.dataAccess.concretes.ProductDao&apos; to &apos;HibernateProductDao&apos;&#x0A;- Original project: &apos;nLayeredDemo&apos;&#x0A;- Original element: &apos;com.nLayeredDemo.dataAccess.concretes.ProductDao&apos;&#x0A;- Renamed element: &apos;com.nLayeredDemo.dataAccess.concretes.HibernateProductDao&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ProductDao&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nLayeredDemo.dataAccess.concretes{ProductDao.java[ProductDao" matchStrategy="1" name="HibernateProductDao" qualified="false" references="true" similarDeclarations="false" stamp="1646577372276" textual="false" version="1.0"/>
+</session>
